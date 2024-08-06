@@ -13,6 +13,7 @@ export class AgGridComponent implements OnInit{
   empData:any[] = [];
   private gridApi! : GridApi<any>;
   paginationPageSizeSelector: number[] = [5,7,10,15,20];
+  paginationPageSize: number = 5;
 
   ngOnInit(): void {
     this.empService.getAllEmployee().subscribe({
