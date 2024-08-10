@@ -1,22 +1,4 @@
-<!-- <ag-grid-angular
-   [rowData]="empData"
-   [columnDefs]="columnDefs"
-   style="height: 500px; width: 100%;"
-   class="ag-theme-quartz"></ag-grid-angular> -->
-<button (click)="onBtExport()"
-style="margin-bottom: 5px; font-weight: bold;">
-  Export to Excel
-</button>
-<ag-grid-angular
-  class="ag-theme-quartz"
-  style="height: 500px; width: auto;"
-  [rowData]="empData"
-  [columnDefs]="columnDefs"
-  [defaultColDef]="defaultColDef"
-  (gridReady)="onGridReady($event)"
-  [rowSelection]="'multiple'"
-  [pagination]="true"
-  [paginationPageSizeSelector]="paginationPageSizeSelector"
-  [paginationPageSize]="paginationPageSize">
-</ag-grid-angular>
-
+<button (click)="onBtExport()" style="margin-bottom: 5px; font-weight: bold;"> Export to Excel </button>
+<div *ngIf="gridOptions"> 
+  <ag-grid-angular class="ag-theme-quartz" style="height: 500px; width: auto;" [gridOptions]="gridOptions"> </ag-grid-angular>
+</div>

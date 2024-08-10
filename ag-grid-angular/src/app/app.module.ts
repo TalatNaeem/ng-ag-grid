@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AgGridModule } from 'ag-grid-angular';
   imports: [
     BrowserModule,
     AgGridModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
